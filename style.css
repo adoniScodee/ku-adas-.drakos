@@ -1,0 +1,112 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+body {
+  background: #0a0a0a;
+  color: #fff;
+  overflow-x: hidden;
+}
+header {
+  background: linear-gradient(90deg, #00f0ff, #008cff);
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 10px #00f0ff;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% {text-shadow: 0 0 10px #00f0ff;}
+  50% {text-shadow: 0 0 20px #00f0ff, 0 0 30px #008cff;}
+  100% {text-shadow: 0 0 10px #00f0ff;}
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #111;
+  padding: 1rem 0;
+}
+nav a {
+  color: #00f0ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.highlight {
+  color: #00f0ff;
+}
+.btn {
+  background: #00f0ff;
+  color: black;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00f0ff;
+  margin-top: 2rem;
+}
+footer {
+  background-color: #111;
+  text-align: center;
+  padding: 2rem;
+  color: #ccc;
+}
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  box-shadow: 0 0 10px #25D366;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.chatbox {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  max-height: 400px;
+  background: #222;
+  border: 2px solid #00f0ff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.chatbox textarea {
+  resize: none;
+  padding: 10px;
+  border: none;
+  height: 60px;
+  background: #111;
+  color: white;
+}
+.chatbox button {
+  background: #00f0ff;
+  border: none;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+}

@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A.Yazılım | Yazılım Hizmetleri</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header>A.YAZILIM</header>
+  <nav>
+    <a href="#hizmetler">Hizmetlerimiz</a>
+    <a href="#iletisim">İletişim</a>
+  </nav>
+  <section id="anasayfa">
+    <h1>Modern ve <span class="highlight">Parlak</span> Yazılım Çözümleri</h1>
+    <p>İşinizi dijitale taşıyın, A.Yazılım ile geleceğe adım atın.</p>
+    <button class="btn" onclick="document.getElementById('iletisim').scrollIntoView({behavior: 'smooth'})">Bize Ulaş</button>
+  </section>
+  <section id="hizmetler">
+    <h2 class="highlight">Hizmetlerimiz</h2>
+    <ul>
+      <li>✔ Web Sitesi Tasarımı</li>
+      <li>✔ SEO Optimizasyonu</li>
+      <li>✔ Mobil Uygulama Geliştirme</li>
+      <li>✔ Sosyal Medya Yönetimi</li>
+    </ul>
+  </section>
+  <section id="iletisim">
+    <h2 class="highlight">İletişim</h2>
+    <p>Email: info@ayazilim.com</p>
+    <p>Whatsapp’tan ulaş: <a href="https://wa.me/905011645967" target="_blank">+90 501 164 5967</a></p>
+  </section>
+  <footer>&copy; 2025 A.Yazılım - Tüm Hakları Saklıdır</footer>
+
+  <a href="https://wa.me/905011645967" target="_blank" class="whatsapp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <div class="chatbox">
+    <textarea placeholder="Mesajınızı yazın..."></textarea>
+    <button onclick="sendMessage()">Gönder</button>
+  </div>
+</body>
+</html>
