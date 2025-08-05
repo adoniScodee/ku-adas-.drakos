@@ -6,13 +6,6 @@
   <title>A.Yazılım | Yazılım Hizmetleri</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    :root {
-      --primary: #4b6cb7;
-      --dark: #1c1c1c;
-      --accent: #f1c40f;
-      --bg-light: #f2f6f9;
-    }
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -21,8 +14,8 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(180deg, var(--bg-light) 0%, #ffffff 100%);
-      color: var(--dark);
+      background: linear-gradient(180deg, #f2f6f9 0%, #ffffff 100%);
+      color: #222;
       scroll-behavior: smooth;
     }
 
@@ -30,17 +23,17 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 50px;
-      background: linear-gradient(to right, var(--dark), var(--primary));
+      padding: 20px 30px;
+      background: linear-gradient(to right, #1c1c1c, #4b6cb7);
       color: white;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
       flex-wrap: wrap;
     }
 
     .logo {
-      font-size: 2em;
+      font-size: 1.8em;
       font-weight: bold;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
     }
 
     nav a {
@@ -49,6 +42,7 @@
       text-decoration: none;
       position: relative;
       font-weight: 500;
+      font-size: 1em;
     }
 
     nav a::after {
@@ -69,20 +63,20 @@
     .hero {
       text-align: center;
       padding: 100px 20px;
-      background: linear-gradient(135deg, var(--primary), #182848);
+      background: linear-gradient(135deg, #4b6cb7, #182848);
       color: white;
       animation: fadeIn 2s ease-in-out;
     }
 
     .highlight {
-      color: var(--accent);
+      color: #f1c40f;
     }
 
     .btn {
       margin-top: 25px;
       padding: 14px 30px;
-      background: var(--accent);
-      color: var(--dark);
+      background: #f1c40f;
+      color: #1c1c1c;
       border: none;
       border-radius: 30px;
       font-weight: bold;
@@ -93,26 +87,42 @@
 
     .btn:hover {
       background: #fff;
-      color: var(--primary);
+      color: #4b6cb7;
+    }
+
+    .two-columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 60px 30px;
+      gap: 40px;
     }
 
     .services, .contact {
-      padding: 60px 30px;
-      text-align: center;
+      flex: 1 1 300px;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .services h2,
+    .contact h2 {
+      margin-bottom: 20px;
+      color: #4b6cb7;
     }
 
     .services ul {
       list-style: none;
+      padding: 0;
       display: flex;
       flex-direction: column;
       gap: 15px;
-      max-width: 600px;
-      margin: auto;
     }
 
     .services li {
-      font-size: 1.2em;
-      background: #f5f7fa;
+      font-size: 1.1em;
+      background: #fff;
       padding: 15px;
       border-radius: 12px;
       transition: all 0.3s;
@@ -121,13 +131,13 @@
     .services li:hover {
       transform: translateY(-3px);
       background: #e0eafc;
-      color: var(--primary);
+      color: #4b6cb7;
     }
 
     footer {
       text-align: center;
       padding: 25px;
-      background: var(--dark);
+      background: #1c1c1c;
       color: white;
     }
 
@@ -175,7 +185,7 @@
       margin-top: 8px;
       width: 100%;
       padding: 10px;
-      background: var(--primary);
+      background: #4b6cb7;
       color: white;
       border: none;
       border-radius: 8px;
@@ -188,21 +198,12 @@
     }
 
     @media (max-width: 768px) {
-      header {
+      .two-columns {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
       }
 
       nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .services ul {
-        flex-direction: column;
-        padding: 0 15px;
+        margin-top: 10px;
       }
     }
   </style>
@@ -216,27 +217,29 @@
     </nav>
   </header>
 
-  <section id="anasayfa" class="hero">
+  <section class="hero">
     <h1>Modern ve <span class="highlight">İleri</span> Yazılım Çözümleri</h1>
     <p>Profesyonel yazılım, mobil uygulama ve web tasarım hizmetleri.</p>
     <button class="btn" onclick="document.getElementById('iletisim').scrollIntoView({behavior: 'smooth'})">Bize Ulaş</button>
   </section>
 
-  <section id="hizmetler" class="services">
-    <h2 class="highlight">Hizmetlerimiz</h2>
-    <ul>
-      <li>Web Sitesi Tasarımı</li>
-      <li>Mobil Uygulama Geliştirme</li>
-      <li>SEO ve Dijital Pazarlama</li>
-      <li>Sosyal Medya Yönetimi</li>
-    </ul>
-  </section>
+  <div class="two-columns">
+    <section id="hizmetler" class="services">
+      <h2>Hizmetlerimiz</h2>
+      <ul>
+        <li>Web Sitesi Tasarımı</li>
+        <li>Mobil Uygulama Geliştirme</li>
+        <li>SEO ve Dijital Pazarlama</li>
+        <li>Sosyal Medya Yönetimi</li>
+      </ul>
+    </section>
 
-  <section id="iletisim" class="contact">
-    <h2 class="highlight">İletisim</h2>
-    <p>Email: <a href="mailto:info@ayazilim.com">info@ayazilim.com</a></p>
-    <p>WhatsApp: <a href="https://wa.me/905011645967" target="_blank">+90 501 164 5967</a></p>
-  </section>
+    <section id="iletisim" class="contact">
+      <h2>İletişim</h2>
+      <p>Email: <a href="mailto:info@ayazilim.com">info@ayazilim.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/905011645967" target="_blank">+90 501 164 5967</a></p>
+    </section>
+  </div>
 
   <footer>
     &copy; 2025 A.Yazılım - Tüm Hakları Saklıdır
