@@ -4,15 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>A.Yazılım | Yazılım Hizmetleri</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    body {
+    :root {
+      --primary: #4b6cb7;
+      --dark: #1c1c1c;
+      --accent: #f1c40f;
+      --bg-light: #f2f6f9;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(180deg, #f2f6f9 0%, #ffffff 100%);
-      color: #222;
+      background: linear-gradient(180deg, var(--bg-light) 0%, #ffffff 100%);
+      color: var(--dark);
       scroll-behavior: smooth;
     }
 
@@ -21,9 +31,10 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 50px;
-      background: linear-gradient(to right, #1c1c1c, #4b6cb7);
+      background: linear-gradient(to right, var(--dark), var(--primary));
       color: white;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      flex-wrap: wrap;
     }
 
     .logo {
@@ -33,7 +44,7 @@
     }
 
     nav a {
-      margin: 0 20px;
+      margin: 0 15px;
       color: white;
       text-decoration: none;
       position: relative;
@@ -57,21 +68,21 @@
 
     .hero {
       text-align: center;
-      padding: 120px 20px;
-      background: linear-gradient(135deg, #4b6cb7, #182848);
+      padding: 100px 20px;
+      background: linear-gradient(135deg, var(--primary), #182848);
       color: white;
       animation: fadeIn 2s ease-in-out;
     }
 
     .highlight {
-      color: #f1c40f;
+      color: var(--accent);
     }
 
     .btn {
       margin-top: 25px;
       padding: 14px 30px;
-      background: #f1c40f;
-      color: #1c1c1c;
+      background: var(--accent);
+      color: var(--dark);
       border: none;
       border-radius: 30px;
       font-weight: bold;
@@ -82,20 +93,21 @@
 
     .btn:hover {
       background: #fff;
-      color: #4b6cb7;
+      color: var(--primary);
     }
 
     .services, .contact {
-      padding: 80px 50px;
+      padding: 60px 30px;
       text-align: center;
     }
 
     .services ul {
       list-style: none;
-      padding: 0;
       display: flex;
       flex-direction: column;
       gap: 15px;
+      max-width: 600px;
+      margin: auto;
     }
 
     .services li {
@@ -109,13 +121,13 @@
     .services li:hover {
       transform: translateY(-3px);
       background: #e0eafc;
-      color: #4b6cb7;
+      color: var(--primary);
     }
 
     footer {
       text-align: center;
       padding: 25px;
-      background: #1c1c1c;
+      background: var(--dark);
       color: white;
     }
 
@@ -163,7 +175,7 @@
       margin-top: 8px;
       width: 100%;
       padding: 10px;
-      background: #4b6cb7;
+      background: var(--primary);
       color: white;
       border: none;
       border-radius: 8px;
@@ -173,6 +185,25 @@
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(40px); }
       100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .services ul {
+        flex-direction: column;
+        padding: 0 15px;
+      }
     }
   </style>
 </head>
