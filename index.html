@@ -7,34 +7,202 @@
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(180deg, #f2f6f9 0%, #ffffff 100%);
+      color: #222;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: linear-gradient(to right, #1c1c1c, #4b6cb7);
+      color: white;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 2em;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      margin: 0 20px;
+      color: white;
+      text-decoration: none;
+      position: relative;
+      font-weight: 500;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #fff;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+      background: linear-gradient(135deg, #4b6cb7, #182848);
+      color: white;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .highlight {
+      color: #f1c40f;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 14px 30px;
+      background: #f1c40f;
+      color: #1c1c1c;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #fff;
+      color: #4b6cb7;
+    }
+
+    .services, .contact {
+      padding: 80px 50px;
+      text-align: center;
+    }
+
+    .services ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .services li {
+      font-size: 1.2em;
+      background: #f5f7fa;
+      padding: 15px;
+      border-radius: 12px;
+      transition: all 0.3s;
+    }
+
+    .services li:hover {
+      transform: translateY(-3px);
+      background: #e0eafc;
+      color: #4b6cb7;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #1c1c1c;
+      color: white;
+    }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      font-size: 30px;
+      color: #25D366;
+      background: white;
+      padding: 12px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      transition: 0.3s ease;
+      z-index: 100;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.1);
+    }
+
+    .chatbox {
+      position: fixed;
+      bottom: 95px;
+      right: 25px;
+      background: white;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 10px;
+      width: 270px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    }
+
+    .chatbox textarea {
+      width: 100%;
+      height: 55px;
+      resize: none;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .chatbox button {
+      margin-top: 8px;
+      width: 100%;
+      padding: 10px;
+      background: #4b6cb7;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1 class="logo">A.YAZILIM</h1>
     <nav>
-      <a href="#hizmetler">Hizmetlerimiz</a>
-      <a href="#iletisim">İletişim</a>
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#iletisim">İletisim</a>
     </nav>
   </header>
 
   <section id="anasayfa" class="hero">
-    <h1>Modern ve <span class="highlight">Parlak</span> Yazılım Çözümleri</h1>
-    <p>İşinizi dijitale taşıyın, A.Yazılım ile geleceğe adım atın.</p>
+    <h1>Modern ve <span class="highlight">İleri</span> Yazılım Çözümleri</h1>
+    <p>Profesyonel yazılım, mobil uygulama ve web tasarım hizmetleri.</p>
     <button class="btn" onclick="document.getElementById('iletisim').scrollIntoView({behavior: 'smooth'})">Bize Ulaş</button>
   </section>
 
   <section id="hizmetler" class="services">
     <h2 class="highlight">Hizmetlerimiz</h2>
     <ul>
-      <li>✔ Web Sitesi Tasarımı</li>
-      <li>✔ SEO Optimizasyonu</li>
-      <li>✔ Mobil Uygulama Geliştirme</li>
-      <li>✔ Sosyal Medya Yönetimi</li>
+      <li>Web Sitesi Tasarımı</li>
+      <li>Mobil Uygulama Geliştirme</li>
+      <li>SEO ve Dijital Pazarlama</li>
+      <li>Sosyal Medya Yönetimi</li>
     </ul>
   </section>
 
   <section id="iletisim" class="contact">
-    <h2 class="highlight">İletişim</h2>
+    <h2 class="highlight">İletisim</h2>
     <p>Email: <a href="mailto:info@ayazilim.com">info@ayazilim.com</a></p>
     <p>WhatsApp: <a href="https://wa.me/905011645967" target="_blank">+90 501 164 5967</a></p>
   </section>
@@ -48,8 +216,21 @@
   </a>
 
   <div class="chatbox">
-    <textarea placeholder="Mesajınızı yazın..."></textarea>
+    <textarea placeholder="Mesaj yaz..."></textarea>
     <button onclick="sendMessage()">Gönder</button>
   </div>
+
+  <script>
+    function sendMessage() {
+      const textarea = document.querySelector('.chatbox textarea');
+      const message = textarea.value.trim();
+      if (message.length > 0) {
+        alert("Mesajınız gönderildi: " + message);
+        textarea.value = '';
+      } else {
+        alert("Lütfen bir mesaj girin.");
+      }
+    }
+  </script>
 </body>
 </html>
