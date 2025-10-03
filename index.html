@@ -2,270 +2,43 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DRAKOS SOFTWARE | Yazılım Hizmetleri</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <style>
-    /* Genel Ayarlar */
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(180deg, #f2f6f9 0%, #ffffff 100%);
-      color: #222;
-      scroll-behavior: smooth;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 50px;
-      background: linear-gradient(to right, #1c1c1c, #4b6cb7);
-      color: white;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .logo {
-      font-size: 2em;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-
-    nav a {
-      margin: 0 20px;
-      color: white;
-      text-decoration: none;
-      position: relative;
-      font-weight: 500;
-    }
-
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -5px;
-      left: 0;
-      background-color: #fff;
-      transition: 0.3s;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 120px 20px;
-      background: linear-gradient(135deg, #4b6cb7, #182848);
-      color: white;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    .highlight {
-      color: #f1c40f;
-    }
-
-    .btn {
-      margin-top: 25px;
-      padding: 14px 30px;
-      background: #f1c40f;
-      color: #1c1c1c;
-      border: none;
-      border-radius: 30px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      transition: 0.3s ease;
-      user-select: none;
-    }
-
-    .btn:hover {
-      background: #fff;
-      color: #4b6cb7;
-    }
-
-    /* Hizmetler Kartları */
-    .services {
-      padding: 80px 50px;
-      max-width: 1000px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .services h2 {
-      font-size: 2.5em;
-      color: #4b6cb7;
-      margin-bottom: 40px;
-    }
-
-    .cards {
-      display: flex;
-      gap: 25px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .card {
-      background: #f5f7fa;
-      border-radius: 16px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-      width: 240px;
-      padding: 30px 20px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: default;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-    }
-
-    .card i {
-      font-size: 3.5em;
-      color: #4b6cb7;
-      margin-bottom: 20px;
-    }
-
-    .card h3 {
-      font-size: 1.4em;
-      margin-bottom: 15px;
-      color: #222;
-    }
-
-    .card p {
-      font-size: 1em;
-      color: #555;
-      line-height: 1.4;
-    }
-
-    /* İletişim Bölümü */
-    .contact {
-      background: #4b6cb7;
-      color: white;
-      padding: 80px 50px;
-      text-align: center;
-    }
-
-    .contact h2 {
-      font-size: 2.5em;
-      margin-bottom: 30px;
-    }
-
-    .contact p {
-      font-size: 1.2em;
-      margin: 12px 0;
-    }
-
-    .contact a {
-      color: #f1c40f;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    /* Mesaj Yaz Butonu */
-    .msg-button {
-      margin-top: 35px;
-      background: #f1c40f;
-      color: #1c1c1c;
-      font-weight: bold;
-      border: none;
-      border-radius: 30px;
-      padding: 14px 30px;
-      font-size: 1.1em;
-      cursor: pointer;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-      transition: background 0.3s ease;
-      user-select: none;
-    }
-
-    .msg-button:hover {
-      background: #fff;
-      color: #4b6cb7;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .cards {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .card {
-        width: 90%;
-        max-width: 350px;
-      }
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(40px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DRAKOS Software</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1 class="logo">DRAKOS SOFTWARE</h1>
+    <div class="logo">
+      <img src="drakos.jpg" alt="Drakos Logo" />
+      <h1>DRAKOS</h1>
+    </div>
     <nav>
-      <a href="#hizmetler">Hizmetler</a>
-      <a href="#iletisim">İletişim</a>
+      <ul>
+        <li><a href="#">Anasayfa</a></li>
+        <li><a href="#">Hizmetler</a></li>
+        <li><a href="#">Hakkımızda</a></li>
+        <li><a href="#">İletişim</a></li>
+        <li><button id="lang-toggle">EN</button></li>
+      </ul>
     </nav>
   </header>
 
-  <section id="anasayfa" class="hero">
-    <h1>Modern ve <span class="highlight">İleri</span> Yazılım Çözümleri</h1>
-    <p>Profesyonel yazılım, mobil uygulama ve web tasarım ile sosyal medya yönetmenliği.</p>
-    <button class="btn" onclick="document.getElementById('iletisim').scrollIntoView({behavior: 'smooth'})">Bize Ulaş</button>
-  </section>
+  <main>
+    <section class="hero">
+      <h2>Yapay Zeka Destekli Yazılım Çözümleri</h2>
+      <p>İşinizi geleceğe taşıyan teknolojilerle tanışın.</p>
+      <a href="#" class="cta">Hemen Teklif Al</a>
+    </section>
+  </main>
 
-  <section id="hizmetler" class="services">
-    <h2>Hizmetlerimiz</h2>
-    <div class="cards">
-      <div class="card">
-        <i class="fas fa-laptop-code"></i>
-        <h3>Web Sitesi Tasarımı</h3>
-        <p>Modern, hızlı ve responsive web siteleri tasarlıyoruz.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-mobile-alt"></i>
-        <h3>Mobil Uygulama Geliştirme</h3>
-        <p>iOS ve Android platformlarına özel kullanıcı dostu uygulamalar.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-search"></i>
-        <h3>SEO ve Dijital Pazarlama</h3>
-        <p>Arama motorlarında görünürlüğünüzü artıracak stratejiler sunuyoruz.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-chart-line"></i>
-        <h3>Sosyal Medya Yönetimi</h3>
-        <p>Markanızın sosyal medyada etkili ve profesyonel yönetimi.</p>
-      </div>
-    </div>
-  </section>
+  <!-- Chatbot Button -->
+  <div class="chatbot-btn" onclick="toggleChat()">💬</div>
+  <div class="chatbot-window" id="chatWindow">
+    <h3>Drakos AI</h3>
+    <div class="chat-log" id="chatLog"></div>
+    <input type="text" id="chatInput" placeholder="Bir şey yazın..." onkeydown="handleChat(event)" />
+  </div>
 
-  <section id="iletisim" class="contact">
-    <h2>İletişim</h2>
-    <p>Email: <a href="mailto:info@ayazilim.com">info@DRAKOS.com</a></p>
-    <p>WhatsApp: <a href="https://wa.me/905011645967" target="_blank">+90 501 164 5967</a></p>
-    <button class="msg-button" onclick="openChat()">Mesaj Yaz</button>
-  </section>
-
-  <footer>
-    &copy; 2025 DRAKOS SOFTWARE - Tüm Hakları Saklıdır
-  </footer>
-
-  <script>
-    function openChat() {
-      alert('WhatsApp ile iletişime geçiniz :)!');
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
